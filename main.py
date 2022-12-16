@@ -50,6 +50,16 @@ hire_date Date
 );
 """
 
+create_salary_table = """
+CREATE TABLE salary (
+employee_id INT PRIMARY KEY,
+first_name VARCHAR(40) NOT NULL,
+last_name VARCHAR(40) NOT NULL,
+salary VARCHAR(10),
+hire_date Date
+);
+ """
+
 
 connection = create_server_connection("localhost", "root", "student","hospitall")
-execute_query(connection, create_employee_table)
+execute_query(connection, create_salary_table)
