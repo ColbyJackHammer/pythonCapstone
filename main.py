@@ -10,7 +10,7 @@ def create_server_connection(host_name, user_name, user_password, db_name):
             user=user_name,
             passwd=user_password,
             database=db_name,
-
+        )
         print("MySQL Database connection successful")
     except Error as err:
         print(f"Error: '{err}'")
@@ -36,6 +36,20 @@ def execute_query(connection, query):
     except Error as err:
         print(f"Error '{err}'")
 
+#TABLES:
+create_employee_table = """
+CREATE TABLE employee (
+employee_id INT PRIMARY KEY,
+dob DATE,
+first_name VARCHAR(40) NOT NULL,
+last_name VARCHAR(40) NOT NULL,
+gender VARCHAR(7) NOT NULL,
+education VARCHAR(40) NOT NULL,
+years_experience VARCHAR(20),
+hire_date Date
+);
+"""
+
 
 connection = create_server_connection("localhost", "root", "student","hospitall")
-create_database(connection, create_database_query)
+execute_query(connection, create_employee_table)
