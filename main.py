@@ -69,6 +69,21 @@ urgent_care VARCHAR(40) NOT NULL
 );
 """
 
+#INFO Inside our Tables:
+table_employee= """
+INSERT INTO employee VALUES
+(1, '1995-02-12', 'James', 'Smith', 'Male','Bachelors Degree', '3 yrs', '2019-03-20'),
+(2, '1994-03-29', 'Larissa', 'Johnson', 'Female','Masters Degree', '4 yrs', '2018-07-20'),
+(3, '1996-08-10', 'Joe', 'Will', 'Male','Bachelors Degree', '2 yrs', '2020-05-10'),
+(4, '1995-06-03', 'riley', 'WinterHouse', 'Female','Bachelors Degree', '3 yrs', '2019-08-25'),
+(5, '1998-08-09', 'James', 'Brown', 'Male','Masters Degree', '1 yrs', '2022-12-10'),
+(6, '1993-05-04', 'Adam', 'West', 'Male','Masters Degree', '5 yrs', '2017-01-05'),
+(7, '1999-08-24', 'Maritza', 'Jones', 'Female','Bachelors Degree', '2 yrs', '2020-05-22'),
+(8, '2000-04-20', 'Cassandra', 'Lopez', 'Female','Bachelors Degree', '1 yrs', '2022-01-27'),
+(9, '1998-07-16', 'John', 'Williams', 'Male','Bachelors Degree', '3 yrs', '2019-09-04'),
+(10, '1993-09-25 ', 'Richard', 'Mitch', 'Male','Masters Degree', '7 yrs', '2015-03-29');
+"""
+
 
 connection = create_server_connection("localhost", "root", "student","hospitall")
-execute_query(connection, create_department_table)
+execute_query(connection, table_employee)
