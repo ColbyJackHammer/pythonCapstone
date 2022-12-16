@@ -112,6 +112,13 @@ INSERT INTO department VALUES
 (10, '', '', 'Richard Mitch');
 """
 
+#Updating our Tables:
+update= """
+UPDATE salary
+SET salary="$225,000"
+WHERE last_name ="Will"
+"""
+
 
 connection = create_server_connection("localhost", "root", "student","hospitall")
-execute_query(connection, table_department)
+execute_query(connection, table_salary)
