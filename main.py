@@ -60,6 +60,15 @@ hire_date Date
 );
  """
 
+create_department_table = """
+CREATE TABLE department (
+employee_id INT PRIMARY KEY,
+surgery VARCHAR(40) NOT NULL,
+burn_unit VARCHAR(40) NOT NULL,
+urgent_care VARCHAR(40) NOT NULL
+);
+"""
+
 
 connection = create_server_connection("localhost", "root", "student","hospitall")
-execute_query(connection, create_salary_table)
+execute_query(connection, create_department_table)
