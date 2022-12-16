@@ -84,6 +84,20 @@ INSERT INTO employee VALUES
 (10, '1993-09-25 ', 'Richard', 'Mitch', 'Male','Masters Degree', '7 yrs', '2015-03-29');
 """
 
+table_salary= """
+INSERT INTO salary VALUES
+(1, 'James', 'Smith', '$80,000', '2019-03-20'),
+(2, 'Larissa', 'Johnson', '$100,000', '2018-07-20'),
+(3, 'Joe', 'Will','$75,000', '2020-05-10'),
+(4, 'riley', 'WinterHouse', '$80,000', '2019-08-25'),
+(5, 'James', 'Brown', '$80,000', '2022-12-10'),
+(6, 'Adam', 'West', '$170,000', '2017-01-05'),
+(7, 'Maritza', 'Jones', '$75,000', '2020-05-22'),
+(8, 'Cassandra', 'Lopez', '$70,000', '2022-01-27'),
+(9, 'John', 'Williams', '$80,000', '2019-09-04'),
+(10, 'Richard', 'Mitch', '$210,000', '2015-03-29');
+"""
+
 
 connection = create_server_connection("localhost", "root", "student","hospitall")
-execute_query(connection, table_employee)
+execute_query(connection, table_salary)
