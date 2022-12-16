@@ -119,6 +119,12 @@ SET salary="$225,000"
 WHERE last_name ="Will"
 """
 
+#Deleting:
+delete="""
+DELETE FROM employee
+WHERE employee_id = 10;
+"""
+
 
 connection = create_server_connection("localhost", "root", "student","hospitall")
-execute_query(connection, table_salary)
+execute_query(connection, table_employee)
