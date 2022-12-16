@@ -98,6 +98,20 @@ INSERT INTO salary VALUES
 (10, 'Richard', 'Mitch', '$210,000', '2015-03-29');
 """
 
+table_department= """
+INSERT INTO department VALUES
+(1, 'James Smith', '', ''),
+(2, 'Larissa Johnson', '', ''),
+(3, 'Joe Will', '', ''),
+(4, '', 'riley WinterHouse', ''),
+(5, '', '', 'James Brown'),
+(6, '', 'Adam West', ''),
+(7, '', 'Maritza Jones', ''),
+(8, '', '', 'Cassandra Lopez'),
+(9, '', 'John Williams', ''),
+(10, '', '', 'Richard Mitch');
+"""
+
 
 connection = create_server_connection("localhost", "root", "student","hospitall")
-execute_query(connection, table_salary)
+execute_query(connection, table_department)
